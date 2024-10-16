@@ -1,38 +1,238 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  box-sizing: border-box;
+}
+.bg-video {
+  position: absolute;
+  z-index: -1;
+}
+.top-section {
+  width: 100%;
+  top: 0;
+  padding: 30px;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+.title {
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: white;
+  margin-left: 10px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-items {
+  position: fixed;
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  list-style: none;
+  /* background-color: #091f21; */
+  background: #0c2b2fb2;
+  color: #b0faffb2;
+  width: 60%;
+  justify-content: center;
+  left: 20%;
+}
+.nav-items li {
+  padding: 10px;
+  cursor: default;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
   text-align: center;
+  border: none;
+  cursor: pointer;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login {
+  width: 80px;
+  height: 30px;
+  background: transparent;
+  color: white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.whitepaper {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #cdfcff;
+  width: 130px;
+  transition: all 0.2s ease-in;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.whitepaper:hover {
+  background-color: #b8e2e5;
+  color: white;
+}
+.heading-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+.headline {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 70px;
+  padding: 10px;
+}
+.headline span {
+  background-color: #b0f9ff;
+  color: #00161d;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+.head-desc {
+  color: #b0faffb2;
+  padding-top: 25px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.open-btn {
+  background: radial-gradient(#8bf9e803, #101a16);
+  color: white;
+  border: 1px solid #101a16;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: 600;
+  transition: all 3s ease;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.open-btn:hover {
+  background: radial-gradient(#cdfcff, #cffcff);
+  color: black;
+}
+.headline-small {
+  display: none;
+}
+.feature-section {
+  background-color: #011116;
+  padding: 30px;
+  padding-top: 100px;
+}
+.feature-section h1 {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+.feature-section-small {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.first-feature-section {
+  display: flex;
+}
+.first-feature-section h4 {
+  color: white;
+  padding: 5px;
+}
+.div-box {
+  background-color: #00161d;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 15px;
+  transition: all 0.6s ease;
+}
+.first-feature-section div p {
+  color: #a4d5d76a;
+  padding: 5px;
+}
+.first-feature-section div {
+  flex-grow: 1;
+}
+.feature-center {
+  display: flex;
+  flex-direction: column;
+}
+.div-box:hover {
+  transform: scale(0.9);
+  background-color: #00161d27;
+  border: 2px solid #011f28;
+}
+.second-feature-section {
+  margin: 5px;
+  margin-top: 10px;
+  display: flex;
+}
+.second-feature-section div {
+  padding: 50px;
+}
+.second-feature-section div h4 {
+  color: white;
+}
+.second-feature-section div p {
+  color: #a4d5d76a;
+}
+
+@media (max-width: 769px) {
+  .nav-items {
+    left: 17%;
   }
-  to {
-    transform: rotate(360deg);
+  .headline {
+    font-size: 40px;
+  }
+  .heading-section {
+    height: 50vh;
+  }
+}
+@media (max-width: 426px) {
+  .nav-items {
+    display: none;
+  }
+  .btn-container {
+    display: none;
+  }
+  .headline {
+    display: none;
+  }
+  .bg-video {
+    display: none;
+  }
+  .top-section {
+    background-color: #031114;
+  }
+  .heading-section {
+    height: 70vh;
+    text-align: center;
+  }
+  .headline-small {
+    display: block;
+    color: white;
+    line-height: 35px;
+    width: 50%;
+  }
+  .span {
+    background-color: #b0f9ff;
+    color: black;
+    width: 150px;
+    border-radius: 15px;
+  }
+  .head-desc {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .feature-section-small {
+    display: block;
+    background-color: #00161d;
+    padding: 30px;
   }
 }
